@@ -1,0 +1,63 @@
+2021-11-09 23:07:42,940 INFO    MainThread:1123402 [wandb_setup.py:_flush():71] setting env: {}
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_setup.py:_flush():71] setting login settings: {}
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:_log_setup():357] Logging user logs to /media/indika/Sync/Programming/Projects/Python/Artifical-Intelligence/PyTorch/RNN/Gooogle-Stock-Price-V6/wandb/run-20211109_230742-3ckrxty7/logs/debug.log
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:_log_setup():358] Logging internal logs to /media/indika/Sync/Programming/Projects/Python/Artifical-Intelligence/PyTorch/RNN/Gooogle-Stock-Price-V6/wandb/run-20211109_230742-3ckrxty7/logs/debug-internal.log
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:_jupyter_setup():307] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f72b58b6ee0>
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:init():390] calling init triggers
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:init():395] wandb.init called with sweep_config: {}
+config: {}
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [wandb_init.py:init():435] starting backend
+2021-11-09 23:07:42,941 INFO    MainThread:1123402 [backend.py:_multiprocessing_setup():94] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-11-09 23:07:43,026 INFO    MainThread:1123402 [backend.py:ensure_launched():198] starting backend process...
+2021-11-09 23:07:43,062 INFO    MainThread:1123402 [backend.py:ensure_launched():203] started backend process with pid: 1136430
+2021-11-09 23:07:43,063 INFO    MainThread:1123402 [wandb_init.py:init():444] backend started and connected
+2021-11-09 23:07:43,074 INFO    MainThread:1123402 [wandb_run.py:_label_probe_notebook():866] probe notebook
+2021-11-09 23:07:43,075 INFO    MainThread:1123402 [wandb_init.py:init():503] updated telemetry
+2021-11-09 23:07:43,088 INFO    MainThread:1123402 [wandb_init.py:init():533] communicating current version
+2021-11-09 23:07:43,149 ERROR   Thread-4  :1123402 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:07:43,150 ERROR   Thread-4  :1123402 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:07:43,150 ERROR   Thread-4  :1123402 [retry.py:__call__():126] Retry attempt failed:
+Traceback (most recent call last):
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 147, in execute
+    six.reraise(*sys.exc_info())
+  File "/home/indika/.local/lib/python3.8/site-packages/six.py", line 719, in reraise
+    raise value
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 141, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/indika/.local/lib/python3.8/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2021-11-09 23:07:44,193 INFO    MainThread:1123402 [wandb_init.py:init():538] got version response upgrade_message: "wandb version 0.12.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2021-11-09 23:07:44,194 INFO    MainThread:1123402 [wandb_init.py:init():548] communicating run to backend with 30 second timeout
+2021-11-09 23:07:48,134 ERROR   Thread-4  :1123402 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:07:48,134 ERROR   Thread-4  :1123402 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:08:04,326 WARNING MainThread:1123402 [wandb_init.py:init():891] interrupted
+Traceback (most recent call last):
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 870, in init
+    run = wi.init()
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 549, in init
+    ret = backend.interface.communicate_run(run, timeout=30)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 210, in communicate_run
+    return self._communicate_run(run, timeout=timeout)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 901, in _communicate_run
+    resp = self._communicate(req, timeout=timeout)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 799, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/interface/router.py", line 32, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt

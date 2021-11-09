@@ -1,0 +1,41 @@
+2021-11-09 23:08:16,893 INFO    MainThread:1137159 [internal.py:wandb_internal():88] W&B internal server running at pid: 1137159, started at: 2021-11-09 23:08:16.893481
+2021-11-09 23:08:16,895 DEBUG   HandlerThread:1137159 [handler.py:handle_request():130] handle_request: check_version
+2021-11-09 23:08:16,895 INFO    WriterThread:1137159 [datastore.py:open_for_write():77] open: /media/indika/Sync/Programming/Projects/Python/Artifical-Intelligence/PyTorch/RNN/Gooogle-Stock-Price-V6/wandb/run-20211109_230816-2wsa7t2c/run-2wsa7t2c.wandb
+2021-11-09 23:08:16,897 DEBUG   SenderThread:1137159 [sender.py:send():185] send: header
+2021-11-09 23:08:16,897 DEBUG   SenderThread:1137159 [sender.py:send_request():199] send_request: check_version
+2021-11-09 23:08:17,260 DEBUG   SenderThread:1137159 [sender.py:send():185] send: run
+2021-11-09 23:08:17,708 ERROR   SenderThread:1137159 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:08:17,709 ERROR   SenderThread:1137159 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:08:19,495 ERROR   SenderThread:1137159 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:08:19,495 ERROR   SenderThread:1137159 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:08:22,433 ERROR   SenderThread:1137159 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:08:22,433 ERROR   SenderThread:1137159 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:08:22,433 ERROR   SenderThread:1137159 [retry.py:__call__():126] Retry attempt failed:
+Traceback (most recent call last):
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 147, in execute
+    six.reraise(*sys.exc_info())
+  File "/home/indika/.local/lib/python3.8/site-packages/six.py", line 719, in reraise
+    raise value
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 141, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/media/indika/Sync/anaconda3/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/indika/.local/lib/python3.8/site-packages/requests/models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2021-11-09 23:08:29,027 ERROR   SenderThread:1137159 [internal_api.py:execute():144] 500 response executing GraphQL.
+2021-11-09 23:08:29,027 ERROR   SenderThread:1137159 [internal_api.py:execute():145] {"error":"Error 1040: Too many connections"}
+
+2021-11-09 23:08:47,261 DEBUG   HandlerThread:1137159 [handler.py:handle_request():130] handle_request: shutdown
+2021-11-09 23:08:47,261 INFO    HandlerThread:1137159 [handler.py:finish():731] shutting down handler
+2021-11-09 23:08:47,264 INFO    WriterThread:1137159 [datastore.py:close():281] close: /media/indika/Sync/Programming/Projects/Python/Artifical-Intelligence/PyTorch/RNN/Gooogle-Stock-Price-V6/wandb/run-20211109_230816-2wsa7t2c/run-2wsa7t2c.wandb
+2021-11-09 23:08:53,985 INFO    MainThread:1137159 [internal.py:handle_exit():78] Internal process exited
